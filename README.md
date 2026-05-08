@@ -3,6 +3,8 @@
 Porting files over. Work in progress 
 
 Transcribe this from paper lol can't find the files at the moment
-<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/32d20ede-fb93-483b-8a1f-de550dd4c079" />
+
+<img width="577" height="800" alt="image" src="https://github.com/user-attachments/assets/2f0d90b6-297c-48a0-a5c2-d3b8e3473bfc" />
+
 
 
