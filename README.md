@@ -22,14 +22,14 @@ $$
   
 $$
 \begin{align}
-dP =  \frac{dρ}{ρ} + \frac{du}{u} + \frac{dA}{A} = 0 \quad \text{(3)}
+\frac{dρ}{ρ} + \frac{du}{u} + \frac{dA}{A} = 0 \quad \text{(3)}
 \end{align}
 $$
 
   
 $$
 \begin{align}
-dP =  \frac{dP}{P} + \frac{dρ}{ρ} + \frac{dT}{T} = 0 \quad \text{(4)}
+\frac{dP}{P} + \frac{dρ}{ρ} + \frac{dT}{T} = 0 \quad \text{(4)}
 \end{align}
 $$
 
@@ -38,7 +38,7 @@ Rayleigh flow fM functions to solve Mach Number:
 
 $$
 \begin{align}
-dP =  1 + \frac{q}{C_pT_t} = \frac{fM_2}{fM_1} \quad \text{(5)}
+1 + \frac{q}{C_pT_t} = \frac{fM_2}{fM_1} \quad \text{(5)}
 \end{align}
 $$
 
