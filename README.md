@@ -38,14 +38,14 @@ Rayleigh flow fM functions to solve Mach Number:
 
 $$
 \begin{align}
-dP =  1 + \frac{q}{C_pT_t} = \frac{fM2}{fM1} \quad \text{(5)}
+dP =  1 + \frac{q}{C_pT_t} = \frac{fM_2}{fM_1} \quad \text{(5)}
 \end{align}
 $$
 
 
 Where the fM function to find Mach of interest is defined as :
 <p align="center">
-$fM = M_2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
+$fM_n = M_2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
 
 
 Fanno flow functions for Mach Number:
