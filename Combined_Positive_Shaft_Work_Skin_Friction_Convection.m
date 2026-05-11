@@ -83,8 +83,6 @@ rhofinal = rhomat(n);
 Mfinal = Machmat(n);
 Ptfinal = Pfinal*((1+((y-1)/2)*Mfinal^2)^(y/(y-1)));
 Ttfinal = Tfinal*(1+((y-1)/2)*Mfinal^2);
-%Forcefinal = (rhofinal*ufinal^2+Pfinal)*Ae - (rho0*u0^2+P0)*A0;
-%Signs seem weird, use the Summation of axial forces with n_hats instead
 Forcefinal = -((rhofinal*ufinal^2*Ae+Pfinal*1*Ae)+(rho0*u0*-u0*A0+P0*-1*A0));
 HeatTransfer = Cp*(Ttfinal-Tt0)-W;
 
