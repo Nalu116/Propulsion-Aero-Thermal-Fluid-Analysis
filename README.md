@@ -1,4 +1,4 @@
-I made this set of aero-thermal tools for chaining through an engine with varying schemas (with/without various work interacitons, and fidelity)
+The scripts found in this repo are various levels of fidelity for aero-thermal-fluid analysis (specifically with propulsion use case in mind, though any thermo-fluid use case that utilized quasi-1D flow and area/mach relations could find this useful).
 
 Initially I utilized MATLAB’s built in syms functionality to numerically solve various systems of equations. However as this became increasingly computationally intensive, it became more efficient (and accurate) to manually define differential elements as functions of the other parameters either by hand or using equation solvers.
 
