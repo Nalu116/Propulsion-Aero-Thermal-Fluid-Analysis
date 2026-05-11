@@ -9,13 +9,13 @@ Quasi 1-D Equations:
 
 $$
 \begin{align}
-dT = \frac{dq + dw + udu}{Cp} \quad\text{(1)}
+dT = \frac{dq + dw + udu}{C_p} \quad\text{(1)}
 \end{align}
 $$
 
 $$
 \begin{align}
-dP = −ρ(udu − ηdw +  \frac{cdxτw}{Aρ} ) \quad\text{(2)}
+dP = −ρ(udu − ηdw +  \frac{cdxτ_w}{Aρ} ) \quad\text{(2)}
 \end{align}
 $$
 
@@ -35,7 +35,7 @@ Rayleigh flow fM functions of Mach Number:
 
 $$
 \begin{align}
-dP =  1 + \frac{q}{CpTt} = \frac{fM2}{fM1} \quad\text{(5)}
+dP =  1 + \frac{q}{C_pT_t} = \frac{fM2}{fM1} \quad\text{(5)}
 \end{align}
 $$
 
