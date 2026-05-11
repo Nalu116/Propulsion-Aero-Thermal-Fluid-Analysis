@@ -77,5 +77,5 @@ $$
 
 Mass flow rate as a function of Mach and local state variables:
 <p align="center">
-$\dot{m} = P_{t2} \sqrt{ (\dfrac{γ}{R})} (\dfrac{1}{T_{t2}^2}) M_2A_e (1 + \dfrac{(γ − 1)M_2^2}{2}) ^ {( \dfrac{γ+1}{2*(y+1)} )}  \quad \text{(11)}$
+$\dot{m} = P_{t2} \sqrt{ (\dfrac{γ}{R})} (\dfrac{1}{T_{t2}^2}) M_2A_e (1 + \dfrac{(γ − 1)M_2^2}{2}) ^ {( \dfrac{γ+1}{2(y+1)} )}  \quad \text{(11)}$
 
