@@ -48,12 +48,15 @@ Where the fM function to find Mach of interest is defined as :
 $fM = M_2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
 
 
-Fanno flow fMv functions for Mach Number
+Fanno flow fvM functions for Mach Number
 <p align="center">
 $γC_f (\frac{c}{A}) L = fvM_2 − fvM_1 \quad \text{(7)}$
 
 
 Where the fvM function is defined as :
 <p align="center">
-$γC_f (\frac{c}{A}) L = fvM_2 − fvM_1 \quad \text{(7)}$
+$fvM =           \dfrac{\frac{γ−1}{2} ln (1 + (γ − 1) \frac{M^2}{2} } {M^2 - \frac{1}{M^2} } \quad \text{(8)}$
+
+
+
 
