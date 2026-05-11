@@ -86,7 +86,6 @@ Machmat = zeros(1, n);
 Amat = zeros(1, n);
 %}
 
-
 Tmat(i) = T0;
 Pmat(i) = P0;
 umat(i) = u0;
@@ -115,44 +114,12 @@ gamma = y;
 i = 2;
 while i < (n+1)
 
-%{
-D = 2*sqrt(Amat(i)/pi);
-c = 2*pi*sqrt(Amat(i)/pi); 
-
-
-Tti = Tmat(i)*(1+((y-1)/2)*Machmat(i)^2); %Local Total Temp variable (changing)
-%dq = 2*Cp*Cf*(Tw-Tti)*(dx/D);
-du = - (dA/Amat(i) + (rhomat(i)*(dw*Eta - (c*dx*Tauw)/(Amat(i)*rhomat(i))))/Pmat(i) - (dq + dw)/(Tmat(i)*Cp))/(1/umat(i) + umat(i)/(Tmat(i)*Cp) - (rhomat(i)*umat(i))/Pmat(i));
-drho =  - rhomat(i)*(dA/Amat(i) + du/umat(i));
-dP =  - rhomat(i)*(du*umat(i) - dw*Eta + (c*dx*Tauw)/(Amat(i)*rhomat(i)));
-dT = (dq + dw - du*umat(i))/Cp;
-
-        umat(i+1) = umat(i) + du;
-        Tmat(i+1) = Tmat(i) + dT;
-        Pmat(i+1) = Pmat(i) + dP; 
-        rhomat(i+1) = rhomat(i) + drho;
-        Machmat(i+1) = umat(i+1)/sqrt((y*R*Tmat(i+1)));
-        Amat(i+1) = Amat(i)+dA;
-
-
-
-%Grant help :) Grazie ***** Lifesaver
- 
-
-umat(i) = ((R*Cp*(umat(i-1)*Amat(i-1)*Eta*dw*mdot*rhomat(i-1)+umat(i-1)^3*Amat(i-1)*rhomat(i-1)+umat(i-1)*((Amat(i)-2*Amat(i-1))*Pmat(i-1)-(Cf*(.5*rhomat(i-1)*umat(i-1)^2))*(2*sqrt(pi*Amat(i-1)))*dx))+2*umat(i-1)*Amat(i-1)*Pmat(i-1)*Cf*R*Cp*(dx/((2*sqrt(pi*Amat(i-1)))/pi))+dq)*y*Tmat(i-1)+((umat(i-1)^3*Amat(i-1)*Pmat(i-1)*Cf-2*umat(i-1)*Amat(i-1)*Pmat(i-1)*Cf*Tw*R)*Cp*(dx/((2*sqrt(pi*Amat(i-1)))/pi))-umat(i-1)*Amat(i-1)*Pmat(i-1)*R*dq+(-umat(i-1)*Amat(i-1)*Pmat(i-1)*dw-umat(i-1)^3*Amat(i-1)*Pmat(i-1))*R)*y-umat(i-1)^3*Amat(i-1)*Pmat(i-1)*Cf*Cp*(dx/((2*sqrt(pi*Amat(i-1)))/pi)))/(R*Cp*(umat(i-1)^2*Amat(i-1)*rhomat(i-1)-Amat(i-1)*Pmat(i-1))*y*Tmat(i-1)-umat(i-1)^2*Amat(i-1)*Pmat(i-1)*R*y);
-rhomat(i) = (rhomat(i-1)*umat(i-1)*Amat(i-1))/(umat(i)*Amat(i));
-Tmat(i) = (((2*Cp*Cf*(Tw-(Tmat(i-1)*(1+((y-1)/2)*((umat(i-1)/(sqrt(y*R*Tmat(i-1)))))^2)))*((dx)/((2*sqrt(pi*Amat(i-1)))/pi))+dq)+dw-umat(i-1)*(umat(i)-umat(i-1)))/Cp)+Tmat(i-1);
-Pmat(i) = rhomat(i)*R*Tmat(i);
-Machmat(i) = umat(i)/(sqrt(y*R*Tmat(i)));
-%}
-
     u(i) = ((R*c_p*(u(i-1)*A(i-1)*eta*dW_shaft*mdot*rho(i-1)+u(i-1)^3*A(i-1)*rho(i-1)+u(i-1)*((A(i)-2*A(i-1))*P(i-1)-(c_f*(.5*rho(i-1)*u(i-1)^2))*(2*sqrt(pi*A(i-1)))*dx))+2*u(i-1)*A(i-1)*P(i-1)*c_f*R*c_p*(dx/((2*sqrt(pi*A(i-1)))/pi))+dQ_rad)*gamma*T(i-1)+((u(i-1)^3*A(i-1)*P(i-1)*c_f-2*u(i-1)*A(i-1)*P(i-1)*c_f*T_w*R)*c_p*(dx/((2*sqrt(pi*A(i-1)))/pi))-u(i-1)*A(i-1)*P(i-1)*R*dQ_rad+(-u(i-1)*A(i-1)*P(i-1)*dW_shaft-u(i-1)^3*A(i-1)*P(i-1))*R)*gamma-u(i-1)^3*A(i-1)*P(i-1)*c_f*c_p*(dx/((2*sqrt(pi*A(i-1)))/pi)))/(R*c_p*(u(i-1)^2*A(i-1)*rho(i-1)-A(i-1)*P(i-1))*gamma*T(i-1)-u(i-1)^2*A(i-1)*P(i-1)*R*gamma);
     rho(i) = (rho(i-1)*u(i-1)*A(i-1))/(u(i)*A(i));
     T(i) = (((2*c_p*c_f*(T_w-(T(i-1)*(1+((gamma-1)/2)*((u(i-1)/(sqrt(gamma*R*T(i-1)))))^2)))*((dx)/((2*sqrt(pi*A(i-1)))/pi))+dQ_rad)+dW_shaft-u(i-1)*(u(i)-u(i-1)))/c_p)+T(i-1);
     P(i) = rho(i)*R*T(i);
     
     M(i) = u(i)/(sqrt(gamma*R*T(i)));
-    
 
 percent = (i/n) * 100;
 waitbar(percent/100,h,sprintf('%.2f%% of Isentropic Flow Calculation Complete',percent))
@@ -162,18 +129,6 @@ waitbar(percent/100,h,sprintf('%.2f%% of Isentropic Flow Calculation Complete',p
 end
 
 close(h); %Close the wait bar
-
-%{
-Pfinal = Pmat(n);
-Tfinal = Tmat(n);
-ufinal = umat(n);
-rhofinal = rhomat(n); 
-Mfinal = Machmat(n);
-Ptfinal = Pfinal*((1+((y-1)/2)*Mfinal^2)^(y/(y-1)));
-Ttfinal = Tfinal*(1+((y-1)/2)*Mfinal^2);
-Forcefinal = (rhofinal*ufinal^2+Pfinal)*Ae - (rho0*u0^2+P0)*A0;
-%}
-
 
 Pfinal = P(n);
 Tfinal = T(n);
