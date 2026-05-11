@@ -124,7 +124,7 @@ fprintf('Mach #            : %f \n',Mfinal)
 fprintf('Velocity          : %f m/s \n',ufinal)
 fprintf('Force             : %f N \n',Forcefinal)
 fprintf('Density           : %f kg/m^3 \n \n',rhofinal)
-fprintf('-----------------------END-PART-OUTPUT-------------------------------\n \n' )
+fprintf('-----------------------END-OUTPUT-------------------------------\n \n' )
 
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
