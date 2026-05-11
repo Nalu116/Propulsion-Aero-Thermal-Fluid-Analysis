@@ -77,14 +77,6 @@ Force = (rho2*ue^2+Pe)*Ae - (rho0*u0^2+P0)*A0;
 i = 1;    %Initialize counter and starting position of array elements
 
 %local conditions of array begin at initial conditions prior to steps
-%{
-Tmat = zeros(1, n);
-Pmat = zeros(1, n);
-umat = zeros(1, n);
-rhomat = zeros(1, n);
-Machmat = zeros(1, n);
-Amat = zeros(1, n);
-%}
 
 Tmat(i) = T0;
 Pmat(i) = P0;
