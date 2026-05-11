@@ -3,7 +3,7 @@ The scripts found in this repo are various levels of fidelity for aero-thermal-f
 Initially I utilized MATLAB’s built in syms functionality to numerically solve various systems of equations. However as this became increasingly computationally intensive, it became more efficient (and accurate) to manually define differential elements as functions of the other parameters either by hand or using equation solvers, so some of the first files made are _slighty_ less accurate (notably the initial quasi-1D file). For best results, use the "Combined_Positive_Shaft_Work_Skin_Friction_Convection.m" script and update any initial conditions manually to capture your specific use case.
 
 For all cases, Quasi 1-D equations ( 1 - 4 ) were manipulated to determine the local differential elements (differential velocity, differential temperature, etc). Based on the particular problem and case, certain
-variables drop out of the equations. For example, an inviscid flow would have the entire fraction term go to zero in equation 2 due to the lack of shear stress in an idealized reversible fluid flow. Further problem types manipulate common equations as defined below:
+variables drop out of the equations. For example, an inviscid flow would have the entire fraction term go to zero in equation 2 due to the lack of shear stress in an idealized reversible fluid flow. Fanno and Rayleigh flow use nested functions defined as fM and fvM to reduce clutter. For further reference, equations manipulated in these scripts are defined below:
 
 Quasi 1-D Equations: 
 
@@ -55,7 +55,7 @@ $γC_f (\frac{c}{A}) L = fvM_2 − fvM_1 \quad \text{(7)}$
 
 Where the fvM function is defined as :
 <p align="center">
-$fvM = \dfrac{\frac{γ−1}{2} ln (1 + (γ − 1) \frac{M^2}{2} } {M^2 - \frac{1}{M^2} } \quad \text{(8)}$
+$fvM_n = \dfrac{\frac{γ−1}{2} ln (1 + (γ − 1) \frac{M^2}{2} } {M^2 - \frac{1}{M^2} } \quad \text{(8)}$
 
 
 Fluid wall shear stress:
