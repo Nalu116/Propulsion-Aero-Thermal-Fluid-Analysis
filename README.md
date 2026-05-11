@@ -9,35 +9,51 @@ Quasi 1-D Equations:
 
 $$
 \begin{align}
-dT = \frac{dq + dw + udu}{C_p} \quad\text{(1)}
+dT = \frac{dq + dw + udu}{C_p} \quad \text{(1)}
 \end{align}
 $$
 
 $$
 \begin{align}
-dP = −ρ(udu − ηdw +  \frac{cdxτ_w}{Aρ} ) \quad\text{(2)}
+dP = −ρ(udu − ηdw +  \frac{cdxτ_w}{Aρ} ) \quad \text{(2)}
 \end{align}
 $$
+
+  
+$$
+\begin{align}
+dP =  \frac{dρ}{ρ} + \frac{du}{u} + \frac{dA}{A} = 0 \quad \text{(3)}
+\end{align}
+$$
+
+  
+$$
+\begin{align}
+dP =  \frac{dP}{P} + \frac{dρ}{ρ} + \frac{dT}{T} = 0 \quad \text{(4)}
+\end{align}
+$$
+
+  
+Rayleigh flow fM functions to solve Mach Number:
 
 $$
 \begin{align}
-dP =  \frac{dρ}{ρ} + \frac{du}{u} + \frac{dA}{A} = 0 \quad\text{(3)}
-\end{align}
-$$
-
-$$
-\begin{align}
-dP =  \frac{dP}{P} + \frac{dρ}{ρ} + \frac{dT}{T} = 0 \quad\text{(4)}
-\end{align}
-$$
-
-Rayleigh flow fM functions of Mach Number:
-
-$$
-\begin{align}
-dP =  1 + \frac{q}{C_pT_t} = \frac{fM2}{fM1} \quad\text{(5)}
+dP =  1 + \frac{q}{C_pT_t} = \frac{fM2}{fM1} \quad \text{(5)}
 \end{align}
 $$
 
 
+Where the fM function to find Mach of interest is defined as :
+<p align="center">
+$fM = M_2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
+
+
+Fanno flow fMv functions for Mach Number
+<p align="center">
+$γC_f (\frac{c}{A}) L = fvM_2 − fvM_1 \quad \text{(7)}$
+
+
+Where the fvM function is defined as :
+<p align="center">
+$γC_f (\frac{c}{A}) L = fvM_2 − fvM_1 \quad \text{(7)}$
 
