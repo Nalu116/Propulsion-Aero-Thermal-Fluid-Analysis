@@ -26,7 +26,7 @@ Tt0 = T0*(1+((y-1)/2)*M0^2);
 Pt1 = Pt0;
 Tt1 = Tt0;
 
-%----Analyitical Solution---(Equation referenced from Reyleigh flow from previous propulsion lecture Godbless Dr. Abbas)
+%----Analyitical Solution---(Equation referenced from Reyleigh flow from previous propulsion lecture Godbless Dr. Riggins + Dr. Abbas)
 fM1 = (M0^2)*((1+((y-1)/2)*M0^2)/(1+(y*M0^2))^2);
 
 syms M2q
