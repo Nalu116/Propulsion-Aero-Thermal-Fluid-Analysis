@@ -69,7 +69,7 @@ dT = (dq + dw - du*umat(i))/Cp;
         Machmat(i+1) = umat(i+1)/sqrt((y*R*Tmat(i+1)));
 
 percent = (i/n) * 100;
-waitbar(percent/100,h,sprintf('%.2f%% of Part 7 Calculation Complete',percent))
+waitbar(percent/100,h,sprintf('%.2f%% of Combined Calculation Complete',percent))
 
         i = i+1;
 end
