@@ -45,7 +45,7 @@ $$
 
 Where the fM function to find Mach of interest is defined as :
 <p align="center">
-$fM_n = M_2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
+$fM_n = M^2 * \dfrac{\frac{1+γ−1}{2}M^2}{{1 + (γM^2)^2}} \quad \text{(6)}$
 
 
 Fanno flow functions for Mach Number:
